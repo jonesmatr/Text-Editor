@@ -16,7 +16,7 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: path.resolve(__dirname, 'src', 'index.html'),
         filename: 'index.html',
       }),
       new WebpackPwaManifest({
@@ -24,16 +24,16 @@ module.exports = () => {
         short_name: 'Text Editor',
         description: 'My awesome Text Editor!',
         background_color: '#ffffff',
-        crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+        crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
+            src: path.resolve(__dirname, 'src', 'images', 'logo.png'),
             sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
           },
         ]
       }),
       new InjectManifest({
-        swSrc: './src/src-sw.js',
+        swSrc: path.resolve(__dirname, 'src', 'src-sw.js'),
       })
     ],
 
