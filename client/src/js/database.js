@@ -17,17 +17,21 @@ export const putDb = async (content) => {
   const db = await openDB('jate', 1);
   const tx = db.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
-  await store.add({ content });
-  await tx.done;
-  console.log('Content added to the database');
+  const request = store.add({ content });
+  const requests = await request;
+  console.log('Content added to the database', result);
 };
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
+  console.log('Getting all the content from the database');
   const db = await openDB('jate', 1);
-  const content = await db.getAll('jate');
-  console.log('Content retrieved from the database:', content);
-  return content.map(item => item.content);  // Adjust as needed depending on the structure of the stored data
+  const tx = db.transaction('jate','readonly');
+  const store = tx.objectStore('jate');
+  const request = store.getAll();
+  const result = await request;
+  console.log('results.value', result);
+  return result; 
 };
 
 
