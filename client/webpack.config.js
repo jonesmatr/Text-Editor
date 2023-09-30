@@ -28,7 +28,7 @@ module.exports = () => {
 
         runtimeCaching: [{
           urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-          handler: 'CasherFirst',
+          handler: 'CacheFirst',
           options: {
             cacheName: 'images',
             expiration: {
