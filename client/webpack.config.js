@@ -33,8 +33,8 @@ module.exports = () => {
         description: 'Installable Text Editor',
         background_color: '#ffffff',
         theme_color: '#ffffff',
-        start_url: '/',
-        publicPath: '/',
+        start_url: './',
+        publicPath: './',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
