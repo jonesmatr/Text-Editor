@@ -28,13 +28,14 @@ module.exports = () => {
         swDest: 'service-worker.js',
       }),
       new WebpackPwaManifest({
-        name: 'Text Editor',
-        short_name: 'Text Editor',
-        description: 'Installable Text Editor',
-        background_color: '#ffffff',
-        theme_color: '#ffffff',
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E',
+        description: 'Takes notes with JavaScript syntax highlighting.',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
         start_url: './',
         publicPath: './',
+        display:'standalone',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
