@@ -27,20 +27,22 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'service-worker.js',
       }),
-      // new WorkboxPlugin.GenerateSW({
-      //   exclude: [/\.(?:png|jpg|jpeg|svg)$/],
-
-      //   runtimeCaching: [{
-      //     urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-      //     handler: 'CacheFirst',
-      //     options: {
-      //       cacheName: 'images',
-      //       expiration: {
-      //         maxEntries: 10,
-      //     },
-      //   },
-      // }],
-      // }),
+      new WebpackPwaManifest({
+        name: 'Text Editor',
+        short_name: 'Text Editor',
+        description: 'Installable Text Editor',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        start_url: '/',
+        publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('src', 'icons')
+          },
+        ]
+      }),
     ],
 
     module: {
