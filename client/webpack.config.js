@@ -23,6 +23,10 @@ module.exports = () => {
         template: './index.html',
         title: 'Webpack Plugin',
       }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js',
+      }),
       new WorkboxPlugin.GenerateSW({
         exclude: [/\.(?:png|jpg|jpeg|svg)$/],
 
