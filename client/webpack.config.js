@@ -23,7 +23,20 @@ module.exports = () => {
         template: './index.html',
         title: 'Webpack Plugin',
       }),
-      new WorkboxPlugin.GenerateSW(),
+      new WorkboxPlugin.GenerateSW({
+        exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+
+        runtimeCaching: [{
+          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+          handler: 'CasherFirst',
+          options: {
+            cacheName: 'images',
+            expiration: {
+              maxEntries: 10,
+          },
+        },
+      }],
+      }),
     ],
 
     module: {
