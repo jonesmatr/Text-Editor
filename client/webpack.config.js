@@ -27,20 +27,20 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'service-worker.js',
       }),
-      new WorkboxPlugin.GenerateSW({
-        exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+      // new WorkboxPlugin.GenerateSW({
+      //   exclude: [/\.(?:png|jpg|jpeg|svg)$/],
 
-        runtimeCaching: [{
-          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'images',
-            expiration: {
-              maxEntries: 10,
-          },
-        },
-      }],
-      }),
+      //   runtimeCaching: [{
+      //     urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+      //     handler: 'CacheFirst',
+      //     options: {
+      //       cacheName: 'images',
+      //       expiration: {
+      //         maxEntries: 10,
+      //     },
+      //   },
+      // }],
+      // }),
     ],
 
     module: {
