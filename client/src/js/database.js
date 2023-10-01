@@ -29,7 +29,7 @@ export const putDb = async (content) => {
   const tx = db.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
   await store.add({ content });
-  console.log('Content added to the database', result);
+  console.log('Content added to the database', content);
 };
 
 // TODO: Add logic for a method that gets all the content from the database
