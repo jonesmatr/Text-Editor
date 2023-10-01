@@ -1,6 +1,4 @@
 const butInstall = document.getElementById('buttonInstall');
-const textHeader = document.getElementById('textHeader');
-
 
 // Logic for installing the PWA
 window.addEventListener('beforeinstallprompt', (event) => {
