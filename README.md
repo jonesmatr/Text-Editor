@@ -6,6 +6,8 @@ J.A.T.E is a web-based text editor that supports JavaScript syntax highlighting.
 
 The site can be accessed [here] (https://text-editor-100123-7b133408c5cd.herokuapp.com/).
 
+![Weather Dashboard](./src/images/Website-Screenshot.jpg) 
+
 ## Installation
 
 ### Clone the repository
