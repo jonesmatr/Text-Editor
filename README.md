@@ -6,7 +6,7 @@ J.A.T.E is a web-based text editor that supports JavaScript syntax highlighting.
 
 The site can be accessed [here] (https://text-editor-100123-7b133408c5cd.herokuapp.com/).
 
-![J.A.T.E.](./src/images/Website-Screenshot.png) 
+![J.A.T.E.](./client/src/images/Website-Screenshot.png) 
 
 ## Installation
 
